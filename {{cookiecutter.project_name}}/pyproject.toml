@@ -10,7 +10,7 @@ python = "^3.8"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.1"
-ipython = "0"
+ipython = "^7.19.0"
 ipdb = "^0.13.4"
 
 [build-system]
