@@ -12,6 +12,12 @@ test:
 	poetry install
 	poetry run pytest
 
+test_ipdb:
+	poetry install
+	poetry run pytest \
+		--pdbcls=IPython.terminal.debugger:TerminalPdb \
+		--pdb
+
 freeze:
 	poetry export -f requirements.txt --output requirements.txt --without-hashes
 
