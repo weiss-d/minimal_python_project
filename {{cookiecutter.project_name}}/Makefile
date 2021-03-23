@@ -1,6 +1,8 @@
 init:
 	git init
 	pre-commit install
+	pre-commit autoupdate
+	poetry update
 	poetry install
 	git add .
 	git commit -m ":tada: Initial commit."
