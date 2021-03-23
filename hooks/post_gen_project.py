@@ -10,6 +10,9 @@ if use_docker == 'y':
         file.write(
             f"""FROM python:{python_version}-alpine
 
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
 WORKDIR /usr/src/{project_slug}
 
 COPY src .
