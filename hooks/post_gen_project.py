@@ -15,13 +15,13 @@ WORKDIR /usr/src/{project_slug}
 COPY src .
 COPY requirements.txt .
 
-RUN addgroup --system npuser \
-    && adduser \
-      --disabled-password \
-      --home "$(pwd)" \
-      --ingroup npuser \
-      --no-create-home \
-    npuser \
+RUN addgroup --system npuser \\
+    && adduser \\
+      --disabled-password \\
+      --home "$(pwd)" \\
+      --ingroup npuser \\
+      --no-create-home \\
+    npuser \\
     && pip install --no-cache-dir -r requirements.txt
 
 USER npuser
