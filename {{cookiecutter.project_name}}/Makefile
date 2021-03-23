@@ -27,3 +27,7 @@ freeze_dev:
 update:
 	poetry update
 	pre-commit autoupdate
+
+docker:
+	poetry export -f requirements.txt --output requirements.txt --without-hashes
+	docker build -t {{cookiecutter.project_slug}} .
